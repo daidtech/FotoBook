@@ -1,7 +1,7 @@
 class Album < ApplicationRecord
   belongs_to :user
-  has_many :photo
-  has_many :like
+  has_many :photos
+  has_many :likes
   validates :title, presence: true, length: {maximum: 140}
   validates :description, presence: true, length: {maximum: 300}
   validates :sharing_mode, presence: true, acceptance: { accept: ['private', 'public'] }

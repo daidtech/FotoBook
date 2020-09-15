@@ -1,7 +1,7 @@
 class User < ApplicationRecord
-  has_many :album
-  has_many :photo
-  has_many :like
+  has_many :albums
+  has_many :photos
+  has_many :likes
 
   # Will return an array of follows for the given user instance
   has_many :received_follows, foreign_key: :followed_user_id, class_name: "Follow"
