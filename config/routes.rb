@@ -6,21 +6,17 @@ Rails.application.routes.draw do
   get '/discover/photos', to: 'application#discover_photos'
   get '/discover/albums', to: 'application#discover_albums'
 
-  namespace :profile do
-    get '/photos', to: 'public_profiles#photos'
-    get '/albums', to: 'public_profiles#albums'
-    get '/followers', to: 'public_profiles#follow'
-    get '/followings', to: 'public_profiles#follow'
+  #public profiles
+  get '/users/:user_id/photos', to: 'public_profile/photos#index'
+  get '/users/:user_id/albums', to: 'public_profile/albums#index'
 
-    get '/myphotos', to: 'my_profiles#photos'
-    get '/myalbums', to: 'my_profiles#albums'
+  get '/users/:user_id/followers', to: 'followers#index'
+  get '/users/:user_id/followings', to: 'followings#index'
+  get '/followers', to: 'followers#index'
+  get '/followings', to: 'followings#index'
 
-    get '/myfollowers', to: 'public_profiles#follow'
-    get '/myfollowings', to: 'public_profiles#follow'
-
-    get '/edit', to: 'my_profiles#edit'
-    put '/', to: 'my_profiles#update'
-  end
+  get '/profiles/edit', to: 'profiles#edit'
+  put '/profiles', to: 'mprofiles#update'
 
   resources :photos
   resources :albums
