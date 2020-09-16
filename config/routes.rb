@@ -25,10 +25,6 @@ Rails.application.routes.draw do
   resources :photos
   resources :albums
 
-  resources :albums, only: [] do
-    resources :photos, only: [:index, :show]
-  end
-
   scope :admin do
     resources :photos, except: [:new, :create]
     resources :albums, except: [:new, :create]
