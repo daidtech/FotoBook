@@ -3,17 +3,21 @@ Rails.application.routes.draw do
   get '/users/login', to: 'users#login'
   get '/users/signup', to: 'users#signup'
 
-  get '/feeds/photos', to: 'application#feeds_photos'
-  get '/feeds/albums', to: 'application#feeds_albums'
-  get '/discover/photos', to: 'application#discover_photos'
-  get '/discover/albums', to: 'application#discover_albums'
+  get '/feeds/photos', to: 'home#feeds_photos'
+  get '/feeds/albums', to: 'home#feeds_albums'
+  get '/discover/photos', to: 'home#discover_photos'
+  get '/discover/albums', to: 'home#discover_albums'
 
   #public profiles
-  get '/users/:user_id/photos', to: 'public_profile/photos#index'
-  get '/users/:user_id/albums', to: 'public_profile/albums#index'
+  resources :users, only: [] do
+    member do
+      get '/photos', to: 'public_profile/photos#index'
+      get '/albums', to: 'public_profile/albums#index'
+      get '/followers', to: 'followers#index'
+      get '/followings', to: 'followings#index'
+    end
+  end
 
-  get '/users/:user_id/followers', to: 'followers#index'
-  get '/users/:user_id/followings', to: 'followings#index'
   get '/followers', to: 'followers#index'
   get '/followings', to: 'followings#index'
 
