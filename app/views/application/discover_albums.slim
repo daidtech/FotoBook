@@ -1,0 +1,25 @@
+#feeds-content
+  #left
+    div
+      p
+        a href="/feeds/photos" class="text-decoration-none text-dark" id="feeds"
+          |Feeds
+      p
+        a href="/discover/photos" class="text-decoration-none text-main" id="discover"
+          |Discover
+  #center
+    #switch
+      a href="/discover/photos" id="switch-photo" class="btn"
+        |PHOTO
+      a href="/discover/albums" id="switch-album" class="btn active"
+        |ALBUM
+    #album
+      .container.mt-3
+        .row
+          = render 'album_block'
+
+=  render 'album_show'
+javascript:
+    $("#switch-photo").prop('style', "background: #3C5A97; color: #ffffff");
+    $("#switch-album").prop('style', "background: #ffffff; color:#3C5A97");
+  });

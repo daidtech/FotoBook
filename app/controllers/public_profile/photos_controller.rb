@@ -1,5 +1,4 @@
-class PublicProfile::AlbumsController < ApplicationController
-  @feed = true
+class PublicProfile::PhotosController < ApplicationController
   def index
     @mess = "this index in public profile"
     puts "#######################"

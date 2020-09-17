@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   # devise_for :users
+  get '/users/login', to: 'users#login'
+  get '/users/signup', to: 'users#signup'
 
   get '/feeds/photos', to: 'application#feeds_photos'
   get '/feeds/albums', to: 'application#feeds_albums'

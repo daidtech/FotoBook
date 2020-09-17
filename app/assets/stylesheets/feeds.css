@@ -28,24 +28,25 @@
   display: flex;
   justify-content: center;
 }
-#feeds-content #center #switch button {
+#feeds-content #center #switch a {
   font-weight: bold;
   padding: 12px;
 }
-#feeds-content #center #switch button:first-child {
+#feeds-content #center #switch a:first-child {
   border: 2px solid #3c5a97;
+  border-radius: 3px 0 0 3px;
+
+}
+#feeds-content #center #switch a:last-child {
+  border: 2px solid #3c5a97;
+  border-left: none;
+  border-radius: 0 3px 3px 0;
+}
+#feeds-content #center #switch a.active {
   background-color: #3c5a97;
   color: #ffffff;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
 }
-#feeds-content #center #switch button:last-child {
-  border: 2px solid #3c5a97;
-  color: #3c5a97;
-  border-left: none;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
+
 #feeds-content #center .block > div {
   display: flex;
 }
