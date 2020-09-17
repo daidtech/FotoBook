@@ -1,0 +1,237 @@
+#feeds-content {
+  display: flex;
+  background-color: #f7f8fc;
+  height: 100%;
+}
+#feeds-content #left {
+  width: 17%;
+}
+#feeds-content #left div {
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+#feeds-content #left div p:first-child {
+  color: #3c5a97;
+}
+#feeds-content #left div p {
+  font-weight: bold;
+}
+#feeds-content #center {
+  width: 75%;
+  background-color: #ffffff;
+  margin-top: 20px;
+  padding-top: 25px;
+  border-radius: 3px;
+}
+#feeds-content #center #switch {
+  display: flex;
+  justify-content: center;
+}
+#feeds-content #center #switch button {
+  font-weight: bold;
+  padding: 12px;
+}
+#feeds-content #center #switch button:first-child {
+  border: 2px solid #3c5a97;
+  background-color: #3c5a97;
+  color: #ffffff;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+#feeds-content #center #switch button:last-child {
+  border: 2px solid #3c5a97;
+  color: #3c5a97;
+  border-left: none;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+#feeds-content #center .block > div {
+  display: flex;
+}
+#feeds-content #center .block > div > div {
+  width: 50%;
+  display: flex;
+  margin: 10px;
+}
+#feeds-content #center .block > div > div:first-child {
+  margin-right: 0;
+  margin-bottom: 0;
+}
+#feeds-content #center .block > div > div:last-child {
+  margin-bottom: 0;
+}
+#feeds-content #center .block > div > div > .thumbnail {
+  height: 270px;
+}
+#feeds-content #center .block > div > div > div > img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+#feeds-content #center .block > div > div .block-info .block-info-user {
+  display: flex;
+  margin: 6px;
+}
+#feeds-content #center .block > div > div .block-info .block-info-user div {
+  margin: auto 0;
+  background-color: #3c5a97;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  margin-right: 6px;
+}
+.block-info-title {
+  margin: 6px;
+}
+.block-info-title > p {
+  margin-top: 6px;
+}
+
+.block-info-user div a {
+  line-height: 30px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.block-info-user p {
+  align-self: center;
+  color: #3c5a97;
+  font-weight: bold;
+}
+.block-info-reaction {
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 6px 0 6px;
+}
+.block-info-reaction > div {
+  display: flex;
+  text-align: center;
+}
+.block-info-reaction .clicked {
+  color: #3c5a97 !important;
+}
+.block-info-reaction .material-icons {
+  color: #cccccc;
+}
+.block-info-reaction .total-heart {
+  align-self: center;
+  color: #3c5a97;
+  font-size: 14px;
+  margin-left: 3px;
+}
+.block-info-reaction > p {
+  color: #cccccc;
+  font-size: 14px;
+  align-self: center;
+}
+
+/* .fixed-show{
+    position: fixed;
+    top: 0;
+    background-color: rgba(255,200,200,0.5);
+    height: 0;
+    width: 0;
+    display: none;
+} */
+/* .fixed-show > div{
+   height: 70%;
+   width: 50%;
+   margin: 8% 24%;
+   background: #ffffff;
+   padding: 20px;
+   border-radius: 5px;
+} */
+/* .fixed-show > div > div{
+    display: flex;
+    justify-content: space-between;
+}
+.fixed-show > div > div > a> span{
+    color: black;
+} */
+.img-style-fixed {
+  object-fit: cover;
+  height: 520px;
+  width: 100%;
+  margin-top: 30px;
+  border-radius: 2px;
+}
+.fixed-show > div > p {
+  object-fit: cover;
+  height: 75%;
+  width: 100%;
+  margin-top: 30px;
+  border-radius: 2px;
+}
+#slide > img {
+  position: relative;
+  background: blue;
+}
+#slide .material-icons {
+  position: absolute;
+  top: 42%;
+  margin-top: 30px;
+  font-size: 100px;
+  color: #ffffff;
+}
+#slide .material-icons {
+  left: 24%;
+}
+#slide #navigate_next {
+  left: 71%;
+}
+
+/* custom */
+.bg-main {
+  background: #3c5a97;
+}
+.text-main {
+  color: #3c5a97 !important;
+}
+.swap-icon-user {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.rotate-5 {
+  transform: rotate(5deg);
+}
+.rotate-10 {
+  transform: rotate(10deg);
+}
+
+.h-260 {
+  height: 260px;
+}
+.w-50 {
+  width: 50%;
+}
+.object-fit-cover {
+  object-fit: cover;
+}
+.line-height-40 {
+  line-height: 40px;
+}
+
+@media (min-width: 376px) {
+  .w-self-50 {
+    width: 100%;
+  }
+}
+@media (min-width: 767px) {
+  .w-self-50 {
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .w-self-50 {
+    width: 50%;
+  }
+  .w-self-60 {
+    width: 60%;
+  }
+  .w-self-40 {
+    width: 40%;
+  }
+}

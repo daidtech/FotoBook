@@ -1,0 +1,59 @@
+div id="sigup-content" class="container"
+  div class="row"
+    div id="title" class="col-md-12 my-3"
+      h2 class="text-center text-main font-weight-bold"
+        |Fotobook Signup
+    div class="col-md-12 mb-3"
+      div class="w-self-25 d-flex justify-content-around mx-auto border rounded"
+        div class="login-social-icon"
+          a href="#"
+            = image_tag('google.jpg')
+        div class="login-social-icon"
+          a href="#"
+            = image_tag('fb.png')
+        div class="login-social-icon"
+          a href="#"
+            = image_tag('twitter.png')
+    div class="col-md-12" id="swap-login-from-data"
+      div class="w-self-25 mx-auto bg-f8f8f8 pb-3"
+        form id="login-from-data" action="#"
+          div class="form-group mb-0 px-3"
+            label for="firstname"
+              |First name
+            input type="text" class="form-control border-bottom-0" id="firstname" name="firstname" placeholder="First name" autofocus="true"
+          div class="form-group px-3"
+            label for="lastname"
+              |Last name
+            input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last name"
+          div class="form-group px-3"
+            label for="password"
+              |New password
+            input type="text" class="form-control" id="password" name="password" placeholder="Password"
+          div class="form-group px-3"
+            label for="password"
+              |Confirm password
+            input type="text" class="form-control" id="confirmation" name="confirmation" placeholder="Password"
+          div class="text-center mb-3"
+            input class="btn bg-main text-white px-4" type="submit" value="Login"
+
+javascript:
+  $("#login-from-data").validate({
+    rules: {
+      firstname: {
+        required: true,
+        maxlength: 25,
+      },
+      lastname: {
+        required: true,
+        maxlength: 25,
+      },
+      password: {
+        required: true,
+        maxlength: 64,
+      },
+      confirmation: {
+        required: true,
+        maxlength: 25,
+      },
+    },
+  });

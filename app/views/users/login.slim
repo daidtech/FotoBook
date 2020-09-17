@@ -1,0 +1,47 @@
+div.container#login-content
+  div.row
+    div class="col-md-12 my-3" id="title"
+      h2 class="text-center text-main font-weight-bold"
+        |Fotobook Login
+    div class="col-md-12 mb-3"
+      div class="w-self-25 d-flex justify-content-around mx-auto border rounded"
+        div class="login-social-icon"
+          a href="#"
+            = image_tag('google.jpg')
+        div class="login-social-icon"
+          a href="#"
+            = image_tag('fb.png')
+        div class="login-social-icon"
+          a href="#"
+            = image_tag('twitter.png')
+    div class="col-md-12"
+      div class="w-self-25 mx-auto bg-f8f8f8 rounded pb-3"
+        form id="login-from-data" action="#"  method="post"
+          .text-center
+            = image_tag('user.svg', id: 'login-user-icon', class: 'my-4', alt: 'error')
+          .form-group.mb-0.px-3
+            input.form-control.border-bottom-0#email type="text" name="email" placeholder="Email" autofocus="true"
+          .form-group.px-3
+            input.form-control#password type="text" name="password" placeholder="Password"
+          .text-center.mb-3
+            input.btn.bg-main.text-white.px-4 type="submit" value="Login"
+          .title.text-center
+            a#btn-forgot-pass href="https://google.com"
+          .title.text-center
+            a#btn-forgot-pass href="#"
+              |Forgot password?
+  .title.text-center.mt-3
+    a href="#"
+      |Create an account
+
+javascript:
+  $("#login-from-data").validate({
+    rules: {
+      email: {
+        required: true,
+      },
+      password: {
+        required: true,
+      },
+    },
+  });

@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+label.error {
+  color: red;
+}
+/* content */
+#content {
+  width: 28%;
+  margin: 70px auto;
+}
+#content #title h1 {
+  color: #3c5a97;
+  text-align: center;
+}
+#content #social-media {
+  margin: 30px auto;
+  padding: 0 5%;
+  width: 60%;
+  border: 2px solid #f8f8f8;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+#content #social-media div > a > img {
+  width: 70px;
+}
+#content #from-data {
+  background-color: #f9f9f9;
+  padding: 30px;
+  padding-bottom: 15px;
+  border-radius: 10px;
+}
+#content #from-data > div > h4 {
+  margin-top: 10px;
+}
+#content #from-data > div > input {
+  width: 90%;
+  border-radius: 5px;
+  border: 2px solid #f0f0f0;
+  margin-top: 3px;
+  padding: 10px;
+}
+#content #from-data > div {
+  justify-content: center;
+}
+#content #from-data > div > button {
+  display: block;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 10px;
+  background-color: #3c5a97;
+  width: 40%;
+  height: 40px;
+  margin: 15px auto;
+  margin-bottom: 0;
+  border-radius: 5px;
+}
+
+/* Login page */
+.login-social-icon img {
+  height: 60px;
+  display: inline;
+}
+#login-user-icon {
+  height: 90px;
+}
+.bg-f8f8f8 {
+  background: #f8f8f8;
+}
+.bg-main {
+  background: #3c5a97 !important;
+}
+.text-main {
+  color: #3c5a97;
+}
+
+/* custom */
+.bg-main {
+  background: #3c5a97;
+}
+.text-main {
+  color: #3c5a97 !important;
+}
+.swap-icon-user {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.rotate-5 {
+  transform: rotate(5deg);
+}
+.rotate-10 {
+  transform: rotate(10deg);
+}
+
+.h-260 {
+  height: 260px;
+}
+.w-50 {
+  width: 50%;
+}
+.object-fit-cover {
+  object-fit: cover;
+}
+.line-height-40 {
+  line-height: 40px;
+}
+
+/*sigup css */
+#sigup-content #swap-login-from-data > div {
+  padding: 18px;
+  border-radius: 9px;
+}
+
+@media (min-width: 376px) {
+  .w-self-25 {
+    width: 100%;
+  }
+  .w-self-50 {
+    width: 100%;
+  }
+}
+@media (min-width: 767px) {
+  .w-self-25 {
+    width: 50%;
+  }
+  .w-self-50 {
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  #sigup-content #swap-login-from-data .w-self-25 {
+    width: 33%;
+  }
+
+  .w-self-50 {
+    width: 50%;
+  }
+  .w-self-60 {
+    width: 60%;
+  }
+  .w-self-40 {
+    width: 40%;
+  }
+  .w-self-25 {
+    width: 25%;
+  }
+}
