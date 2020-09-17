@@ -2,9 +2,8 @@ class PhotosController < ApplicationController
   def index
   end
   def new
-    puts "########### NEW ##########"
-
-    puts "#####################"
+    @mess = "new page for photo"
+    @photo = Photo.new()
   end
   def create
     puts "#####################"

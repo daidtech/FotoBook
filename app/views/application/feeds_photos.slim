@@ -1,0 +1,20 @@
+#feeds-content
+  #left
+    div
+      p
+        a href="/feeds/photos" class="text-decoration-none text-main" id="feeds"
+          |Feeds
+      p
+        a href="/discover/photos" class="text-decoration-none text-dark" id="discover"
+          |Discover
+  #center
+    #switch
+      a href="/feeds/photos" id="switch-photo" class="btn active"
+        |PHOTO
+      a href="/feeds/albums" id="switch-album" class="btn"
+        |ALBUM
+    #photo
+      .container.mt-3
+        .row
+          =  render 'photo_block'
+=  render 'photo_show'
