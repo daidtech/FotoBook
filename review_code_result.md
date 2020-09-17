@@ -14,3 +14,15 @@
         + Public profile follows  `/users/:user_id/followings` -> `followings_controller#index` sẽ giống với my profile `/followings` -> `followings_controller#index`
 
     - Việc lồng resource `photos` và resource `albums` để sử dụng cho màn hình nào vậy?     
+
+
+## Review code 20200917
+---
+
+1. `Album has_many :photos` cũng cần `dependent: :destroy`
+
+2. Update lại association bên `Like` mà mấy cái khóa ngoại dư thừa chưa xóa.
+
+3. Route từ dòng 10 đến dòng 19 đều phù hợp để dùng resourceful. Cần sửa lại.
+
+4. Dòng 4 đến dòng 7, ko nên define action vào application controller. Nó là controller base để các controller khác kế thừa, chỉ viết những gì mà các controller khác cần dùng thôi chứ ko viết action vào.
