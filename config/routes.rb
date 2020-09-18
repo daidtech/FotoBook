@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   get '/followings', to: 'followings#index'
 
   get '/profiles/edit', to: 'profiles#edit'
-  put '/profiles', to: 'mprofiles#update'
+  put '/profiles', to: 'profiles#update'
 
   resources :photos
   resources :albums
@@ -33,5 +33,5 @@ Rails.application.routes.draw do
     resources :users, except: [:new, :create]
   end
 
-  root to: "application#feeds"
+  root to: "home#feeds_photos"
 end
