@@ -24,9 +24,9 @@ end
 ########### Album ############
 20.times do |i|
   if i<=10
-    Album.create(title: "Album#{i}", description: "description album#{i} description album10 process of internationalization usually means to abstract all strings and other locale process of internationalization usually means to abstract all strings and other locale", sharing_mode: "public", user: u1)
+    Album.create(title: "Album#{i}", description: "description album#{i} process of internationalization usually means to abstract all strings and other locale process of...", sharing_mode: "public", user: u1)
   else
-    Album.create(title: "Album#{i}", description: "description album#{i} description album10 process of internationalization usually means to abstract all strings and other locale process of internationalization usually means to abstract all strings and other locale", sharing_mode: "private", user: u1)
+    Album.create(title: "Album#{i}", description: "description album#{i} process of internationalization usually means to abstract all strings and other locale process of...", sharing_mode: "private", user: u1)
   end
 end
 
