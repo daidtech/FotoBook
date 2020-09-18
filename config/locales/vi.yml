@@ -1,0 +1,16 @@
+vi:
+  search: "Tìm kiếm ảnh/album"
+  singup: "Đăng ký"
+  first_name: "Tên"
+  last_name: "Họ"
+  password: "Mật Khẩu"
+  new_password: "Mật Khẩu Mới"
+  confirm_password: "Xác Nhận Mật Khẩu"
+
+  login: "Đăng Nhập"
+  forgot_password: "Quên mật khẩu?"
+  create_new_account: "Tạo tài khoản"
+
+  feeds: "Trang chủ"
+  discover: "Khám phá"
+  photo: "Ảnh"

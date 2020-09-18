@@ -42,7 +42,7 @@
         <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
           <div class="">
             <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search Photo/Album" aria-label="Search" />
+              <input class="form-control mr-sm-2" type="text" placeholder="<%=t('search')%>" aria-label="Search" />
             </form>
           </div>
           <div>
@@ -58,13 +58,15 @@
                 </li>
               <%end%>
               <li class="nav-item">
-                <a class="nav-link text-white font-weight-bold" href="#">Login</a>
+                <a class="nav-link text-white font-weight-bold" href="#"><%= t('login') %></a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
     </div>
+<%= link_to "English", locale:"en" %>
+<%= link_to "Vietnamese", locale:"vi" %>
 
     <%= yield %>
 

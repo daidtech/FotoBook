@@ -3,14 +3,14 @@
     div
       p
         a href="/feeds/photos" class="text-decoration-none text-main" id="feeds"
-          |Feeds
+          = t('feeds')
       p
         a href="/discover/photos" class="text-decoration-none text-dark" id="discover"
-          |Discover
+          = t('discover')
   #center
     #switch
       a href="/feeds/photos" id="switch-photo" class="btn active"
-        |PHOTO
+        = t('photo')
       a href="/feeds/albums" id="switch-album" class="btn"
         |ALBUM
     #photo

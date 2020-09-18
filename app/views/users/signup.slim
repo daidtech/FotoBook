@@ -19,23 +19,23 @@ div id="sigup-content" class="container"
         form id="login-from-data" action="#"
           div class="form-group mb-0 px-3"
             label for="firstname"
-              |First name
-            input type="text" class="form-control border-bottom-0" id="firstname" name="firstname" placeholder="First name" autofocus="true"
+              = t('first_name')
+            input type="text" class="form-control border-bottom-0" id="firstname" name="firstname" placeholder="#{t('first_name')}" autofocus="true"
           div class="form-group px-3"
             label for="lastname"
-              |Last name
-            input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last name"
+              = t('last_name')
+            input type="text" class="form-control" id="lastname" name="lastname" placeholder="#{t('last_name')}"
           div class="form-group px-3"
             label for="password"
-              |New password
-            input type="text" class="form-control" id="password" name="password" placeholder="Password"
+              = t('new_password')
+            input type="text" class="form-control" id="password" name="password" placeholder="#{t('password')}"
           div class="form-group px-3"
             label for="password"
-              |Confirm password
-            input type="text" class="form-control" id="confirmation" name="confirmation" placeholder="Password"
+              = t('confirm_password')
+            input type="text" class="form-control" id="confirmation" name="confirmation" placeholder="#{t('password')}"
           div class="text-center mb-3"
-            input class="btn bg-main text-white px-4" type="submit" value="Login"
-
+            = submit_tag "Signup", class: "btn bg-main text-white px-4"
+            / #{t('signup')}
 javascript:
   $("#login-from-data").validate({
     rules: {

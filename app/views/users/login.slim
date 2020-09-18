@@ -22,17 +22,17 @@ div.container#login-content
           .form-group.mb-0.px-3
             input.form-control.border-bottom-0#email type="text" name="email" placeholder="Email" autofocus="true"
           .form-group.px-3
-            input.form-control#password type="text" name="password" placeholder="Password"
+            input.form-control#password type="text" name="password" placeholder="#{t('password')}"
           .text-center.mb-3
             input.btn.bg-main.text-white.px-4 type="submit" value="Login"
           .title.text-center
             a#btn-forgot-pass href="https://google.com"
           .title.text-center
             a#btn-forgot-pass href="#"
-              |Forgot password?
+              = t("forgot_password")
   .title.text-center.mt-3
     a href="#"
-      |Create an account
+      = t("create_new_account")
 
 javascript:
   $("#login-from-data").validate({

@@ -30,4 +30,18 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  search: "Search Photo/Album"
+  singup: "Singup"
+  first_name: "First Name"
+  last_name: "Last Name"
+  password: "Password"
+  new_password: "New Password"
+  confirm_password: "Confirm Password"
+
+  login: "Login"
+  forgot_password: "Forgot password?"
+  create_new_account: "Create an account"
+
+  feeds: "Feeds"
+  discover: "Discover"
+  photo: "Photo"
