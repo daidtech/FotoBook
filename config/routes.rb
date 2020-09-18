@@ -20,11 +20,10 @@ Rails.application.routes.draw do
       end
     end
 
-    get '/followers', to: 'followers#index'
-    get '/followings', to: 'followings#index'
+    resources :followers, only: :index
+    resources :followings, only: :index
 
-    get '/profiles/edit', to: 'profiles#edit'
-    put '/profiles', to: 'profiles#update'
+    resource :profile, only: [:edit, :update]
 
     resources :photos
     resources :albums
