@@ -2,17 +2,14 @@
   #left
     div
       p
-        a href="/feeds/photos" class="text-decoration-none text-main" id="feeds"
-          |Feeds
+        = link_to t('feeds'), feeds_photos_path, id: 'feeds', class: 'ext-decoration-none text-main'
       p
-        a href="/discover/photos" class="text-decoration-none text-dark" id="discover"
-          |Discover
+        = link_to t('discover'), discover_photos_path, id: 'discover', class: 'ext-decoration-none text-dark'
+
   #center
     #switch
-      a href="/feeds/photos" id="switch-photo" class="btn"
-        |PHOTO
-      a href="#" id="switch-album" class="btn active"
-        |ALBUM
+      = link_to t('photo'), feeds_photos_path, id: 'switch-photo', class: 'btn'
+      = link_to t('album'), feeds_albums_path, id: 'switch-album', class: 'btn active'
     #album
       .container.mt-3
         .row
