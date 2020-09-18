@@ -56,3 +56,4 @@ gem "devise", "~> 4.1"
 gem "slim"
 gem 'rails-i18n'
 gem "i18n-js"
+gem "figaro"

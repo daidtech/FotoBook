@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :user_tests
   # devise_for :users
   scope "(:locale)", locale: /en|vi/ do
     get '/users/login', to: 'users#login'
