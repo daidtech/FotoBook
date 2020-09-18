@@ -15,18 +15,18 @@ end
 u1 = User.first
 20.times do |i|
   if i<=10
-    Photo.create(title: "photo#{i}", description: "description photo#{i}", sharing_mode: "public", user: u1)
+    Photo.create(title: "photo#{i}", description: "description photo#{i} process of internationalization usually means to abstract all strings and other locale specific bits nd other locale specific bits nd other locale specific bits nd other locale specific bits", sharing_mode: "public", user: u1)
   else
-    Photo.create(title: "photo#{i}", description: "description photo#{i}", sharing_mode: "private", user: u1)
+    Photo.create(title: "photo#{i}", description: "description photo#{i} process of internationalization usually means to abstract all strings and other locale specific bits nd other locale specific bits nd other locale specific bits nd other locale specific bits", sharing_mode: "private", user: u1)
   end
 end
 
 ########### Album ############
 20.times do |i|
   if i<=10
-    Album.create(title: "Album#{i}", description: "description album#{i}", sharing_mode: "public", user: u1)
+    Album.create(title: "Album#{i}", description: "description album#{i} description album10 process of internationalization usually means to abstract all strings and other locale process of internationalization usually means to abstract all strings and other locale", sharing_mode: "public", user: u1)
   else
-    Album.create(title: "Album#{i}", description: "description album#{i}", sharing_mode: "private", user: u1)
+    Album.create(title: "Album#{i}", description: "description album#{i} description album10 process of internationalization usually means to abstract all strings and other locale process of internationalization usually means to abstract all strings and other locale", sharing_mode: "private", user: u1)
   end
 end
 
