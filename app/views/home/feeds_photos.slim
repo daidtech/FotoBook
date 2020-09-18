@@ -16,5 +16,6 @@
     #photo
       .container.mt-3
         .row
-          =  render 'photo_block'
+          - @public_photos.each do |photo|
+            =  render 'photo_block', photo: photo
 =  render 'photo_show'

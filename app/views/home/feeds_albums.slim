@@ -16,10 +16,10 @@
     #album
       .container.mt-3
         .row
-          = render 'album_block'
+          - @public_albums.each do |album|
+            =  render 'album_block', album: album
 
 =  render 'album_show'
 javascript:
     $("#switch-photo").prop('style', "background: #3C5A97; color: #ffffff");
     $("#switch-album").prop('style', "background: #ffffff; color:#3C5A97");
-  });

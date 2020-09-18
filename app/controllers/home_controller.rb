@@ -2,17 +2,20 @@ class HomeController < ApplicationController
   before_action :feed?
 
   def feeds_photos
-    @mess = "this feeds page"
+    user = User.find(11)
+    @public_photos = user.photos.where(sharing_mode: "public").order(updated_at: :desc)
   end
   def feeds_albums
-    @mess = "this feeds page"
+    user = User.find(11)
+    @public_albums = user.albums.where(sharing_mode: "public").order(updated_at: :desc)
   end
 
   def discover_photos
-    @mess = "this discover"
+    @photos = Photo.where(sharing_mode: "public").order(updated_at: :desc)
   end
+
   def discover_albums
-    @mess = "this discover"
+    @albums = Album.where(sharing_mode: "public").order(updated_at: :desc)
   end
   private
     def feed?

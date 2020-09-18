@@ -13,18 +13,16 @@ div class="col-12 col-md-6"
               |HN
           div
             a class="text-main line-height-40 font-weight-bold" href="#"
-              |Hieu Nguyen
+              = photo.user.last_name
         h5
-          |Nam tempest is the
+          = photo.title
         p
-          |The transform property applies a 2D or 3D transformation
-          |to an element. This property allows you to rotate,
-          |scale, move, skew, etc., elements.
+          = photo.description
         div class="block-info-reaction"
           div
             span class="material-icons clicked"
               |favorite
             p class="total-heart"
-              |123
+              = photo.likes.count
             p
-              |4:50 pm 01/04/2018
+              =photo.created_at.strftime("%I:%M%p %d-%m-%Y")

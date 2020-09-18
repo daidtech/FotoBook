@@ -18,17 +18,16 @@ div class="col-12 col-md-6"
               |HN
           div
             a class="text-main line-height-40 font-weight-bold" href="#"
-              |Hieu Nguyen
+              = album.user.last_name
         h5
-          |Nam tempest is the
+          = album.title
         p
-          |The transform property applies a 2D or 3D transformation
-          |to an element. This property allows you to rotate...
+          = album.description
         div class="block-info-reaction"
           div
             span class="material-icons clicked"
               |favorite
             p class="total-heart"
-              |123
+              = album.likes.count
             p
-              |4:50 pm 01/04
+              = album.created_at.strftime("%I:%M%p %d-%m-%Y")
