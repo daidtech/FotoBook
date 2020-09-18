@@ -15,3 +15,6 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+import I18n from "i18n-js";
+
+global.I18n = I18n;

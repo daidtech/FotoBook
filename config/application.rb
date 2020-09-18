@@ -17,7 +17,11 @@ module Fotobook
     # the framework and any gems in your application.
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
     config.i18n.available_locales = [:en, :vi]
-    config.i18n.default_locale = :en
 
+    # It's a good idea to set a default
+    config.i18n.default_locale = :en
+    # If you don't specify these, I18n::JS will generate files for all locales
+    # config.i18n.available_locales = %w(en vi)
+    config.middleware.use I18n::JS::Middleware
   end
 end

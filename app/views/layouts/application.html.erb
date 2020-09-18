@@ -1,83 +1,89 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Fotobook</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag 'signup_login', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag 'feeds', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+<head>
+  <title>Fotobook</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'signup_login', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'feeds', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-     <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
-    <!-- bootstrap -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
-  </head>
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-  <body>
-    <div class="bg-main px-2 px-md-5">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand text-light" href="#">Fotobook</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+  <%= javascript_tag do %>
+    I18n.locale = "<%= I18n.locale %>";
+    I18n.translations = {};
+    I18n.translations["<%= I18n.locale %>"] = <%= raw I18n::JS.filtered_translations[I18n.locale].to_json %>;
+  <% end %>
 
-        <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-          <div class="">
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="<%=t('search')%>" aria-label="Search" />
-            </form>
-          </div>
-          <div>
-            <ul class="navbar-nav mr-auto">
-              <%if @feed%>
-                <li class="nav-item active">
-                  <div class="form-row mx-0">
-                    <div class="swap-icon-user bg-white text-center">
-                      <a class="nav-link icon-user text-main" href="#">HN</a>
-                    </div>
-                    <a class="nav-link text-light" href="#">Hieu Nguyen</a>
-                  </div>
-                </li>
-              <%end%>
-              <li class="nav-item">
-                <a class="nav-link text-white font-weight-bold" href="#"><%= t('login') %></a>
-              </li>
-            </ul>
-          </div>
+</head>
+
+<body>
+  <script type="text/javascript">
+    console.log(I18n.t("hello"))
+    console.log(I18n.t("password"))
+  </script>
+
+  <div class="bg-main px-2 px-md-5">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand text-light" href="#">Fotobook</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+        <div class="">
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="<%=t('search')%>" aria-label="Search" />
+          </form>
         </div>
-      </nav>
-    </div>
-<%= link_to "English", locale:"en" %>
-<%= link_to "Vietnamese", locale:"vi" %>
+        <div>
+          <ul class="navbar-nav mr-auto">
+            <%if @feed%>
+            <li class="nav-item active">
+              <div class="form-row mx-0">
+                <div class="swap-icon-user bg-white text-center">
+                  <a class="nav-link icon-user text-main" href="#">HN</a>
+                </div>
+                <a class="nav-link text-light" href="#">Hieu Nguyen</a>
+              </div>
+            </li>
+            <%end%>
+            <li class="nav-item">
+              <a class="nav-link text-white font-weight-bold" href="#"><%= t('login') %></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <%= link_to "English", locale:"en" %>
+  <%= link_to "Vietnamese", locale:"vi" %>
 
-    <%= yield %>
+  <%= yield %>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"></script>
-  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
