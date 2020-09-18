@@ -24,9 +24,9 @@ end
 ########### Album ############
 20.times do |i|
   if i<=10
-    Album.create(title: "photo#{i}", description: "description photo#{i}", sharing_mode: "public", user: u1)
+    Album.create(title: "Album#{i}", description: "description album#{i}", sharing_mode: "public", user: u1)
   else
-    Album.create(title: "photo#{i}", description: "description photo#{i}", sharing_mode: "private", user: u1)
+    Album.create(title: "Album#{i}", description: "description album#{i}", sharing_mode: "private", user: u1)
   end
 end
 
