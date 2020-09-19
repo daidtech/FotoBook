@@ -28,9 +28,6 @@ class UserTestsController < ApplicationController
 
     respond_to do |format|
       if @user_test.save
-        # Tell the UserMailer to send a welcome email after save
-        UserMailer.with(user: @user_test).welcome_email.deliver_later
-
         format.html { redirect_to(@user_test, notice: 'user_test was successfully created.') }
         format.json { render json: @user_test, status: :created, location: @user_test }
       else
