@@ -1,17 +1,23 @@
 class PhotosController < ApplicationController
+  before_action :authenticate_user!
+
   def index
+    user = current_user
+    @public_photos = user.photos
   end
   def new
     @mess = "new page for photo"
     @photo = Photo.new()
   end
   def create
-    puts "#####################"
-    user = User.find(1)
-    photo = Photo.new(photo_params)
-    photo.user = @user
-
-    puts "#####################"
+    user = current_user
+    @photo = Photo.new(photo_params)
+    @photo.user_id = user.id
+    if @photo.save
+      redirect_to photos_path
+    else
+      render 'new'
+    end
   end
   private
     # Using a private method to encapsulate the permissible parameters

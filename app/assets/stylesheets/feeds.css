@@ -236,3 +236,39 @@
     width: 40%;
   }
 }
+
+/* css file input in new photo page */
+div.fileinputs {
+  position: relative;
+  height: 150px;
+  width: 150px;
+}
+div.fakefile {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  border: 1px dashed grey;
+  background: #F7F8FC;
+  border-radius: 5px;
+
+}
+input.file {
+  position: relative;
+  text-align: right;
+  /* -moz-opacity:0 ; */
+  /* filter:alpha(opacity: 0); */
+  opacity: 0;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+}
+.fakefile span{
+  height: 100%;
+  width: 100%;
+  font-size: 100px;
+  text-align: center;
+  margin: auto 0;
+}

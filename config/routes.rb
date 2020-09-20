@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
   scope "(:locale)", locale: /en|vi/ do
+    #for send mail practice
     resources :user_tests
+    #devise
     devise_for :users, controllers: { registrations: 'users/registrations' }
     # get '/users/login', to: 'users#login'
     # get '/users/signup', to: 'users#signup'

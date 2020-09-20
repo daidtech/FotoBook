@@ -1,0 +1,19 @@
+#feeds-content
+  #left
+    div
+      p
+        = link_to t('feeds'), feeds_photos_path, id: 'feeds', class: 'ext-decoration-none text-main'
+      p
+        = link_to t('discover'), discover_photos_path, id: 'discover', class: 'ext-decoration-none text-dark'
+
+  #center
+    #photo
+      .container.mt-3
+        .row
+          - if user_signed_in? && @public_photos.count > 0
+            - @public_photos.each do |photo|
+              =  render '/home/photo_block', photo: photo
+          - else
+            p
+              |No photo to show
+    = link_to  'new photo', new_photo_path, class: 'text-decoration-none'
