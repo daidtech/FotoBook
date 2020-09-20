@@ -13,6 +13,11 @@
     #photo
       .container.mt-3
         .row
-          - @public_photos.each do |photo|
-            =  render 'photo_block', photo: photo
+          - if user_signed_in? && @public_photos.count > 0
+            - @public_photos.each do |photo|
+              =  render 'photo_block', photo: photo
+          - else
+            p
+              |No photo to show
+
 =  render 'photo_show'

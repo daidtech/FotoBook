@@ -2,8 +2,10 @@ class HomeController < ApplicationController
   before_action :feed?
 
   def feeds_photos
-    user = User.find(11)
-    @public_photos = user.photos.where(sharing_mode: "public").order(updated_at: :desc)
+    user = current_user
+    unless user.nil?
+      @public_photos = user.photos.where(sharing_mode: "public").order(updated_at: :desc)
+    end
   end
   def feeds_albums
     user = User.find(11)
