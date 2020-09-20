@@ -52,13 +52,13 @@
         </div>
         <div>
           <ul class="navbar-nav mr-auto">
-            <%if @feed%>
+            <%if user_signed_in?%>
             <li class="nav-item active">
               <div class="form-row mx-0">
                 <div class="swap-icon-user bg-white text-center">
-                  <a class="nav-link icon-user text-main" href="#">HN</a>
+                  <a class="nav-link icon-user text-main font-weight-bold" href="#"><%= current_user.first_name[0] + " " + current_user.last_name[0]%></a>
                 </div>
-                <a class="nav-link text-light" href="#">Hieu Nguyen</a>
+                <a class="nav-link text-light" href="#"><%= current_user.first_name + " " + current_user.last_name%></a>
               </div>
             </li>
             <%end%>
