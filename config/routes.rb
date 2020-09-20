@@ -1,16 +1,17 @@
 Rails.application.routes.draw do
-  resources :user_tests
-  # devise_for :users
+
   scope "(:locale)", locale: /en|vi/ do
-    get '/users/login', to: 'users#login'
-    get '/users/signup', to: 'users#signup'
+    resources :user_tests
+    devise_for :users, controllers: { registrations: 'users/registrations' }
+    # get '/users/login', to: 'users#login'
+    # get '/users/signup', to: 'users#signup'
 
     get '/feeds/photos', to: 'home#feeds_photos'
     get '/feeds/albums', to: 'home#feeds_albums'
     get '/discover/photos', to: 'home#discover_photos'
     get '/discover/albums', to: 'home#discover_albums'
 
-    #public profiles
+    # public profiles
     resources :users, only: [] do
       member do
         get '/photos', to: 'public_profile/photos#index'

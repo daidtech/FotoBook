@@ -1,26 +1,38 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+<div id="sigup-content" class="container">
+  <div class="row">
+    <div id="title" class="col-md-12 my-3" >
+      <h1 class="text-center text-main font-weight-bold">Fotobook Signup</h1>
     </div>
-  <% end %>
+    <div id="social-media" class="col-md-12 mb-3">
+      <div class="w-self-25 d-flex justify-content-around mx-auto border rounded">
+        <div class="login-social-icon"><a href="#"><%=image_tag('google.jpg')%></a></div>
+        <div class="login-social-icon"><a href="#"><%=image_tag('fb.png')%></a></div>
+        <div class="login-social-icon"><a href="#"><%=image_tag('twitter.png')%></a></div>
+    </div>
+    </div>
+    <div  class="col-md-12" id="swap-login-from-data">
+      <div class="w-self-25 mx-auto bg-f8f8f8 pb-3">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <%= render "devise/shared/error_messages", resource: resource %>
+          <div class="text-center">
+            <%= image_tag('user.svg', id: 'login-user-icon', class: 'my-4', alt: 'error') %>
+          </div>
+          <div class="field form-group  mb-0 px-3">
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control border-bottom-0", placeholder: "Email"%>
+          </div>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
+          <div class="field form-group px-3">
+            <%= f.password_field :password, autocomplete: "current-password", class: "form-control", placeholder: t('password')%>
+          </div>
+
+          <div class="actions text-center mb-3">
+            <%= f.submit "Login", class: "btn bg-main text-white px-4"%>
+          </div>
+        <% end %>
+          <div class="actions text-center mb-3">
+            <%= render "devise/shared/links" %>
+          </div>
+      </div>
+    </div>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
