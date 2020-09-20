@@ -23,5 +23,7 @@ module Fotobook
     # If you don't specify these, I18n::JS will generate files for all locales
     # config.i18n.available_locales = %w(en vi)
     config.middleware.use I18n::JS::Middleware
+
+    config.active_job.queue_adapter = :sidekiq
   end
 end

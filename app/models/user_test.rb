@@ -1,6 +1,6 @@
 class UserTest < ApplicationRecord
   after_create do |user|
     # Tell the UserMailer to send a welcome email after save
-    UserMailer.with(user: user).welcome_email.deliver_later
+    WelcomeUserTestJob.perform_later(user)
   end
 end

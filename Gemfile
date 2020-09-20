@@ -57,3 +57,4 @@ gem "slim"
 gem 'rails-i18n'
 gem "i18n-js"
 gem "figaro"
+gem 'sidekiq', '~> 6.1.0'
