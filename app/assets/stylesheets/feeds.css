@@ -240,8 +240,8 @@
 /* css file input in new photo page */
 div.fileinputs {
   position: relative;
-  height: 150px;
-  width: 150px;
+  height: 110px;
+  width: 110px;
 }
 div.fakefile {
   position: absolute;

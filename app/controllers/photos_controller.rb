@@ -25,6 +25,6 @@ class PhotosController < ApplicationController
     # permit list between create and update. Also, you can specialize
     # this method with per-user checking of permissible attributes.
     def photo_params
-      params.require(:photo).permit(:title, :description, :sharing_mode)
+      params.require(:photo).permit(:title, :description, :sharing_mode, :thumb)
     end
 end

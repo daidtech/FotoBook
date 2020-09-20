@@ -2,7 +2,7 @@
   #left
     div
       p
-        = link_to t('feeds'), feeds_photos_path, id: 'feeds', class: 'ext-decoration-none text-main'
+        = link_to t('feeds'), feeds_photos_path, id: 'feeds', class: 'ext-decoration-none text-dark'
       p
         = link_to t('discover'), discover_photos_path, id: 'discover', class: 'ext-decoration-none text-dark'
   #center.px-3
@@ -27,7 +27,7 @@
           div.pt-4
             / input type="file" class="form-control-file" id="description" size="60"
             div.fileinputs
-              input type="file" class="file"
+              = form.file_field :thumb, accept: "image/jpeg, image/gif, image/png, image/jpg", class: 'file'
               div.fakefile
                 span.material-icons
                   |add
