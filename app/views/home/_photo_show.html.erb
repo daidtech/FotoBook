@@ -1,24 +1,22 @@
- <div id="photo-show">
-  <div class="modal fade" id="show-photo" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalCenterTitle">
-            Modal title
-          </h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">x</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <%= image_tag('1.jpg', class: 'd-block w-100') %>
-        </div>
-        <div class="modal-footer">
-          <p>
-            The transform property applies a 2D or 3D transformation to an
-            element. This property allows you to rotate,...
-          </p>
-        </div>
+<div class="modal fade" id="show-photo<%= photo.id %>" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">
+          Modal title
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">x</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= image_tag("#{photo.thumb.blank? ? '1.jpg': photo.thumb  }", class: 'd-block w-100') %>
+      </div>
+      <div class="modal-footer">
+        <p>
+          The transform property ap plies a 2D or 3D transformation to an
+          element. This property allows you to rotate,...
+        </p>
       </div>
     </div>
   </div>

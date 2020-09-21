@@ -60,3 +60,4 @@ gem "figaro"
 gem 'sidekiq', '~> 6.1.0'
 gem 'carrierwave', '~> 2.0'
 gem 'kaminari'
+gem 'bootstrap4-kaminari-views'

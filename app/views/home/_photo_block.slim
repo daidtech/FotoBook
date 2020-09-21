@@ -1,7 +1,7 @@
 / block 1 left
 div class="col-12 col-md-6"
   div class="d-flex justify-content-between"
-    div class="w-self-50 photo-block-img" data-target="#show-photo" data-toggle="modal"
+    div class="w-self-50 photo-block-img" data-target="#show-photo#{photo.id}" data-toggle="modal"
       div class="position-relative w-100"
         div class="position-absolute"
           = image_tag("#{photo.thumb.blank? ? '1.jpg': photo.thumb  }" , class: 'h-260 w-100 object-fit-cover rounded')

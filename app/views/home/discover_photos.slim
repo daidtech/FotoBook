@@ -14,7 +14,8 @@
         .row
           - @photos.each do |photo|
               =  render 'photo_block', photo: photo
+              =  render 'photo_show', photo: photo
           div class="col-12 d-flex justify-content-center"
-            = paginate @photos
+            = paginate @photos, theme: 'twitter-bootstrap-4'
 
-=  render 'photo_show'
+

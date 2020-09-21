@@ -16,3 +16,7 @@ vi:
   photo: "Ảnh"
 
   hello: "Chào!"
+
+  views:
+    pagination:
+      truncate: ...

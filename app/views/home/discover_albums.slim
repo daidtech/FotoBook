@@ -14,6 +14,6 @@
         .row
           - @albums.each do |album|
             =  render 'album_block', album: album
+            =  render 'album_show', album: album
           div class="col-12 d-flex justify-content-center"
-            = paginate @albums
-=  render 'album_show'
+            = paginate @albums, theme: 'twitter-bootstrap-4'
