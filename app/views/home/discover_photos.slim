@@ -14,4 +14,7 @@
         .row
           - @photos.each do |photo|
               =  render 'photo_block', photo: photo
+          div class="col-12 d-flex justify-content-center"
+            = paginate @photos
+
 =  render 'photo_show'

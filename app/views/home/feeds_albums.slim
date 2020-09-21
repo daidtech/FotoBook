@@ -2,9 +2,9 @@
   #left
     div
       p
-        = link_to t('feeds'), feeds_photos_path, id: 'feeds', class: 'ext-decoration-none text-main'
+        = link_to t('feeds'), feeds_photos_path, id: 'feeds', class: 'text-decoration-none text-main'
       p
-        = link_to t('discover'), discover_photos_path, id: 'discover', class: 'ext-decoration-none text-dark'
+        = link_to t('discover'), discover_photos_path, id: 'discover', class: 'text-decoration-none text-dark'
 
   #center
     #switch
@@ -19,5 +19,5 @@
           - else
             p
               |No album to show
-
+          = paginate @public_albums
 =  render 'album_show'

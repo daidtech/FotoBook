@@ -4,20 +4,20 @@ class HomeController < ApplicationController
   def feeds_photos
     user = current_user
     unless user.nil?
-      @public_photos = user.photos.where(sharing_mode: "public").order(updated_at: :desc)
+      @public_photos = user.photos.where(sharing_mode: "public").order(updated_at: :desc).page(params[:page])
     end
   end
   def feeds_albums
     user = User.find(11)
-    @public_albums = user.albums.where(sharing_mode: "public").order(updated_at: :desc)
+    @public_albums = user.albums.where(sharing_mode: "public").order(updated_at: :desc).page(params[:page])
   end
 
   def discover_photos
-    @photos = Photo.where(sharing_mode: "public").order(updated_at: :desc)
+    @photos = Photo.where(sharing_mode: "public").order(updated_at: :desc).page(params[:page])
   end
 
   def discover_albums
-    @albums = Album.where(sharing_mode: "public").order(updated_at: :desc)
+    @albums = Album.where(sharing_mode: "public").order(updated_at: :desc).page(params[:page])
   end
   private
     def feed?

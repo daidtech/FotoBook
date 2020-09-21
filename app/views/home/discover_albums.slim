@@ -14,5 +14,6 @@
         .row
           - @albums.each do |album|
             =  render 'album_block', album: album
-
+          div class="col-12 d-flex justify-content-center"
+            = paginate @albums
 =  render 'album_show'
