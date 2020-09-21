@@ -11,8 +11,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   def create
-    puts "################## i'm"
-    puts params
     super
   end
 
@@ -44,7 +42,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
-    puts "################## i'm proteted"
     devise_parameter_sanitizer.permit(:sign_up, keys: [:last_name, :first_name])
   end
 
