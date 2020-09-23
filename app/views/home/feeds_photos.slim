@@ -21,5 +21,6 @@
             p
               |No photo to show
           div class="col-12"
-            = paginate @public_photos, theme: 'twitter-bootstrap-4'
+            - if user_signed_in? && @public_photos.count > 0
+              = paginate @public_photos, theme: 'twitter-bootstrap-4'
 

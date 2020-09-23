@@ -1,0 +1,33 @@
+<%= form_with(model: @album) do |f|%>
+  <%= f.label :sex%>
+  <%= f.text_field :sex%>
+  <%= f.check_box :child%>
+  <%= f.check_box :child%>
+
+  <div>
+    <%= f.label :category %>
+    <%= f.radio_button :category, "dog"%>
+    <%= f.radio_button :category, "cat"%>
+  </div>
+
+  <%= f.search_field :src%>
+  <%= f.telephone_field :phone %>
+  <%= f.date_field :appointment %>
+
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+  <%= radio_button_tag(:age, "child") %>
+  <%= label_tag(:age_child, "I am younger than 21") %>
+  <%= radio_button_tag(:age, "adult") %>
+  <%= label_tag(:age_adult, "I am over 21") %>
+  <%= radio_button_tag(:age, "Parent") %>
+  <%= label_tag(:age) %>
+  <%= number_field(:product, :price, in: 1.0..9.0, step: 0.3) %>
+  <%= color_field(:article, :favorite) %>
+<% end %>
+
+<style>
+  body {
+    background: #a87e7e
+  }
+</style>

@@ -31,7 +31,9 @@ Rails.application.routes.draw do
     resources :photos
     resources :albums
 
-    scope :admin do
+    # /admin -> admin/users#index
+
+    namespace :admin do
       resources :photos, except: [:new, :create]
       resources :albums, except: [:new, :create]
       resources :users, except: [:new, :create]

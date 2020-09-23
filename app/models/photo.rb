@@ -11,3 +11,4 @@ class Photo < ApplicationRecord
   #  maximum 01 image. Accepted formats are jpeq, png and gif. Maximum size is 5Mb.
   # Attached image ( ?
 end
+

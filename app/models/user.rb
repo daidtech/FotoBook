@@ -1,4 +1,16 @@
 class User < ApplicationRecord
+  validate :start_with_a
+
+  scope :is_daidinh, -> email {where("email = ?", email)}
+
+  before_save do |user|
+    puts "I'm before_save "+user.first_name
+  end
+
+  after_save do |user|
+    puts "I'm after_save "+user.first_name
+  end
+
   has_many :albums, dependent: :destroy
   has_many :photos, dependent: :destroy
   has_many :likes, dependent: :destroy
@@ -24,4 +36,12 @@ class User < ApplicationRecord
   validates :email, presence: true, length: { maximum: 255 }
   validates :password, presence: true, length: { maximum: 64 }
   # Avatar (optional): Accepted format: jpeg, png. Maximum size is 2Mb.
+
+  def start_with_a
+    unless first_name.nil?
+      if first_name[0] == 'a' || first_name[0] == 'b'
+        errors.add(:first_name, "not start with a")
+      end
+    end
+  end
 end
